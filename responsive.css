@@ -23,9 +23,9 @@
     }
 
     .hero-section::before {
-        top: -15%;
+        top: -25%;
         left: 10px;
-        transform: rotate(350deg);
+        transform: rotate(355deg);
     }
 }
 
@@ -66,9 +66,9 @@
     }
 
     .hero-section::before {
-        top: -10%;
+        top: -25%;
         left: 5px;
-        transform: rotate(345deg);
+        transform: rotate(358deg);
     }
 
     /* Mobile Menu */
