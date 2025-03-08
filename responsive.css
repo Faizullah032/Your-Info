@@ -24,8 +24,8 @@
 
     .hero-section::before {
         top: -25%;
-        left: 10px;
-        transform: rotate(355deg);
+        left: 0px;
+        transform: rotate(360deg);
     }
 }
 
@@ -67,8 +67,8 @@
 
     .hero-section::before {
         top: -25%;
-        left: 5px;
-        transform: rotate(358deg);
+        left: 0px;
+        transform: rotate(360deg);
     }
 
     /* Mobile Menu */
@@ -83,6 +83,7 @@
         position: absolute;
         top: 80px;
         left: 0;
+        z-index: 999;
         width: 100%;
         background-color: white;
         padding: 20px;
@@ -143,7 +144,7 @@
     .hero-section::before {
         top: -25%;
         left: 0;
-        transform: rotate(358deg);
+        transform: rotate(360deg);
         border-radius: 15px;
     }
 

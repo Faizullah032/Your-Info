@@ -1,6 +1,6 @@
 // GSAP Navbar Animation
-gsap.from(".nav-btn,.logo", {
-    y: -100,
+gsap.from(".nav-btn, .logo", {
+    y: -50, // Reduced from -100
     opacity: 0,
     duration: 0.8,
     delay: 0.3,
@@ -8,7 +8,7 @@ gsap.from(".nav-btn,.logo", {
 });
 
 gsap.from(".nav-items", {
-    y: -120,
+    y: -50, // Reduced from -120
     opacity: 0,
     duration: 0.7,
     delay: 0.3,
@@ -16,9 +16,9 @@ gsap.from(".nav-items", {
 });
 
 // Hero Section Animation
-gsap.from(".hero-heading,.hero-para,.hero-btn", {
-    y: 150,
-    x: -150,
+gsap.from(".hero-heading, .hero-para, .hero-btn", {
+    y: 50, // Reduced from 150
+    x: -50, // Reduced from -150
     opacity: 0,
     duration: 0.9,
     delay: 0.3,
@@ -27,8 +27,8 @@ gsap.from(".hero-heading,.hero-para,.hero-btn", {
 });
 
 gsap.from(".hero-section img", {
-    x: 150,
-    y: 150,
+    x: 50, // Reduced from 150
+    y: 50, // Reduced from 150
     opacity: 0,
     duration: 0.9,
     delay: 0.3,
@@ -44,20 +44,20 @@ let aboutTL = gsap.timeline({
         start: "top 85%",
         end: "top 20%",
         scrub: 1.5,
-    }
+    },
 });
 
 aboutTL.from(".about-image", {
-    x: -250,
-    y: 250,
+    x: -100, // Reduced from -250
+    y: 100, // Reduced from 250
     opacity: 0,
     duration: 0.6,
     ease: "power.out",
 });
 
-aboutTL.from(".about-heading,.about-para", {
-    y: 250,
-    x: 250,
+aboutTL.from(".about-heading, .about-para", {
+    y: 100, // Reduced from 250
+    x: 100, // Reduced from 250
     opacity: 0,
     duration: 0.6,
     ease: "power.out",
@@ -71,20 +71,20 @@ let contactTL = gsap.timeline({
         start: "top 70%",
         end: "top 20%",
         scrub: 1.5,
-    }
+    },
 });
 
 contactTL.from(".contact-image", {
-    x: 250,
-    y: 250,
+    x: 100, // Reduced from 250
+    y: 100, // Reduced from 250
     opacity: 0,
     duration: 1.5,
     ease: "power.out",
 });
 
 contactTL.from(".contact-heading, .contact-para, .input, .submit", {
-    x: -250,
-    y: 250,
+    x: -100, // Reduced from -250
+    y: 100, // Reduced from 250
     opacity: 0,
     duration: 1.5,
     ease: "power.out",
@@ -92,7 +92,7 @@ contactTL.from(".contact-heading, .contact-para, .input, .submit", {
 }, "-=0.5");
 
 contactTL.from(".inner-container, .container", {
-    transform: "scale(0.5)",
+    transform: "scale(0.8)", // Reduced from 0.5
     opacity: 0,
     duration: 1,
 }, "-=1");
