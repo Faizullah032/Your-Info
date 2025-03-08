@@ -1,104 +1,117 @@
-gsap.from(".nav-btn,.logo",{
-    y:-150,
-    opacity:0,
-    duration:0.9,
-    delay:0.5,
-    ease:"power.out",
+// GSAP Navbar Animation
+gsap.from(".nav-btn,.logo", {
+    y: -100,
+    opacity: 0,
+    duration: 0.8,
+    delay: 0.3,
+    ease: "power.out",
 });
 
-gsap.from(".nav-items",{
-    y:-180,
-    opacity:0,
-    duration:0.8,
-    delay:0.5,
-    ease:"power3.out", 
+gsap.from(".nav-items", {
+    y: -120,
+    opacity: 0,
+    duration: 0.7,
+    delay: 0.3,
+    ease: "power3.out",
 });
 
-gsap.from(".hero-heading,.hero-para,.hero-btn",{
-    y:250,
-    x:-250,
-    opacity:0,
-    duration:1,
-    delay:0.5,
+// Hero Section Animation
+gsap.from(".hero-heading,.hero-para,.hero-btn", {
+    y: 150,
+    x: -150,
+    opacity: 0,
+    duration: 0.9,
+    delay: 0.3,
     ease: "power2.out",
-    stagger:0.2
+    stagger: 0.2,
 });
 
-gsap.from(".hero-section img",{
-    x:250,
-    y:250,
-    opacity:0,
-    duration:1,
-    delay:0.5,
-    ease:"power.out",
+gsap.from(".hero-section img", {
+    x: 150,
+    y: 150,
+    opacity: 0,
+    duration: 0.9,
+    delay: 0.3,
+    ease: "power.out",
 });
 
+// About Section Animation (with ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
-var tl = gsap.timeline({
+let aboutTL = gsap.timeline({
     scrollTrigger: {
-        trigger:".about-section",
-        scroll:"body",
-        start:"top 80%",
-        end:"top 10%",
-        scrub:2,
+        trigger: ".about-section",
+        start: "top 85%",
+        end: "top 20%",
+        scrub: 1.5,
     }
 });
 
-
-tl.from(".about-image",{
-    x:-450,
-    y:450,
-    duration:0.5,
-    opacity:0,
-    delay:0.5,
+aboutTL.from(".about-image", {
+    x: -250,
+    y: 250,
+    opacity: 0,
+    duration: 0.6,
     ease: "power.out",
 });
 
-tl.from(".about-heading,.about-para",{
-    y:450,
-    x:450,
-    duration:0.5,
-    opacity:0,
-    delay:0.5,
+aboutTL.from(".about-heading,.about-para", {
+    y: 250,
+    x: 250,
+    opacity: 0,
+    duration: 0.6,
     ease: "power.out",
-    stagger:0.2,
-},"-=1");
+    stagger: 0.2,
+}, "-=0.5");
 
-var tl2 = gsap.timeline({
-    scrollTrigger:{
-        trigger:".contact-section",
-        scroller:"body",
-        start:"top 60%",
-        end:"top 10%",
-        scrub:2,
+// Contact Section Animation
+let contactTL = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".contact-section",
+        start: "top 70%",
+        end: "top 20%",
+        scrub: 1.5,
     }
-})
+});
 
-
-tl2.from(".contact-image",{
-    x:450,
-    y:450,
-    duration:2.5,
-    opacity:0,
-    delay:0.5,
+contactTL.from(".contact-image", {
+    x: 250,
+    y: 250,
+    opacity: 0,
+    duration: 1.5,
     ease: "power.out",
 });
 
-
-tl2.from(".contact-heading, .contact-para, .input, .submit",{
-    x:-450,
-    y:450,
-    duration:5.5,
-    opacity:0,
-    delay:0.8,
+contactTL.from(".contact-heading, .contact-para, .input, .submit", {
+    x: -250,
+    y: 250,
+    opacity: 0,
+    duration: 1.5,
     ease: "power.out",
-    stagger:0.2,
-},"-=1");
+    stagger: 0.2,
+}, "-=0.5");
 
+contactTL.from(".inner-container, .container", {
+    transform: "scale(0.5)",
+    opacity: 0,
+    duration: 1,
+}, "-=1");
 
-tl2.from(".inner-container, .container",{
-    transform:"scale(0.1)",
-    duration:1.8,
-    opacity:0,
-    delay:0.5,
-},"=2");
+// Toggle Mobile Menu
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    hamburger.classList.toggle("active");
+
+    // GSAP animation for menu items appearing
+    if (navMenu.classList.contains("active")) {
+        gsap.from(".nav-items li", {
+            opacity: 0,
+            y: -20,
+            duration: 0.5,
+            stagger: 0.1,
+        });
+    }
+});

@@ -1,3 +1,4 @@
+/* Main Styles */
 * {
     margin: 0;
     padding: 0;
@@ -5,122 +6,150 @@
 }
 
 body {
-    overflow-x: hidden;
+    overflow-x: hidden!important;
 }
 
-.nav-container{
+/* Navbar Styles */
+.nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0px;
-    max-width: 1320px;
-    margin: auto;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .nav-items {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-    font-size: 20px;
+    gap: 20px;
     list-style: none;
-    text-decoration: none;
 }
 
 .list-item {
     text-decoration: none;
     color: black;
+    font-size: 18px;
 }
 
 .nav-btn, .hero-btn {
-    padding: 10px 25px;
+    padding: 10px 20px;
     background-color: #2dced6;
     color: white;
-    font-size: 20px;
-    border: 2px solid white;
+    font-size: 18px;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
-.nav-btn a,.hero-btn{
+.nav-btn a, .hero-btn {
     color: white;
-    font-size: 20px;
     text-decoration: none;
 }
 
-.hero-section,.about-section ,.contact-section{
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Hero, About, Contact Section */
+.hero-section, .about-section, .contact-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     align-items: center;
-    padding:100px 0px;
-    max-width: 1320px;
+    padding: 100px 0px;
+    max-width: 90%;
     margin: auto;
 }
 
-.hero-section{
-margin-top: 50px;
-}
-
-.contact-section{
-    margin-bottom: 100px;
+.hero-section {
+    margin-top: 50px;
+    position: relative;
 }
 
 .hero-section::before {
     content: '';
     background: linear-gradient(45deg, #E9F7FF, #CAEAFC);
     position: absolute;
-    height: 100%;
-    width: 100%;
-    top: -28%;
-    left: 20px;
+    height: 120%;
+    width: 110%;
+    top: -40%;
+    left: -80px;
     z-index: -1;
     transform: rotate(353deg);
     border-radius: 30px;
-    overflow: hidden;
 }
 
-.hero-image,.about-image,.contact-image{
+.contact-section {
+    margin-bottom: 100px;
+}
+
+.hero-image, .about-image, .contact-image {
     width: 100%;
     height: 100%;
 }
 
 .hero-heading {
     font-size: 90px;
-    margin: 0;
 }
 
-.hero-para , .about-para,.contact-para{
+.hero-para, .about-para, .contact-para {
     font-size: 24px;
     margin: 20px auto;
 }
 
 .about-heading, .contact-heading {
-
     font-size: 75px;
     background: -webkit-linear-gradient(134deg, #1146f9, #64BFF4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
     margin-bottom: 5px;
-
 }
 
-.inputs-fields{
+.inputs-fields {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
 }
 
-.inputs-fields input{
+.inputs-fields input {
     padding: 18px;
     border-radius: 5px;
     border: 1px solid #666;
 }
 
-.submit{
-    padding:15px 38px;
+.submit {
+    padding: 15px 38px;
     margin-top: 15px;
     border-radius: 5px;
     border: 1px solid #2DCED6;
@@ -129,6 +158,7 @@ margin-top: 50px;
     background-color: #2DCED6;
 }
 
+/* Footer */
 .footer {
     display: flex;
     flex-direction: column;
@@ -136,28 +166,28 @@ margin-top: 50px;
     justify-content: center;
     gap: 25px;
     padding: 100px;
-    background: linear-gradient(0deg,#2DCED6,#3C52F3);
+    background: linear-gradient(0deg, #2DCED6, #3C52F3);
 }
 
 .inner-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1320px;
-    margin-top:-180px!important;
-    margin:auto;
+    width: 90%;
+    margin: auto;
     background-color: #3C52F3;
     border: 2px solid white;
-    padding: 50px !important;
+    padding: 50px;
     gap: 50px;
+    margin-top: -190px;
 }
 
-.inner-container h4{
+.inner-container h4 {
     font-size: 32px;
     color: white;
 }
 
-.inner-container input{
+.inner-container input {
     font-size: 22px;
     padding: 18px;
     width: 50%;
@@ -169,13 +199,10 @@ margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1320px;
+    flex-wrap: wrap;
+    max-width: 90%;
     margin: auto;
     color: white;
     font-size: 20px;
-    margin-top: 25px !important;
-}
-
-:placeholder-shown {
-    font-size: 18px;
+    margin-top: 25px;
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
      <link rel="stylesheet" href="styles.css" />
+     <link rel="stylesheet" href="responsive.css" />
     <title>Your Info</title>
 </head>
 <body>
@@ -15,7 +16,8 @@
                 <a href="https://flowbite.com" class="">
                     <img src="images/logo.svg" class="logo" alt="Flowbite Logo" />
                 </a>
-                <div class="" id="mobile-menu-2">
+
+                <div class="nav-menu" id="nav-menu">
                     <ul class="nav-items">
                         <li>
                             <a href="#" class="list-item">Home</a>
@@ -31,12 +33,18 @@
                 <div class="nav-btn">
                     <a href="#" class="">Log in</a>
                 </div>
+
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
             </div>
         </nav>
     </header>
 
-    <section>
-        <div class="hero-section">
+    <section class="hero-section">
             <div >
                 <h1 class="hero-heading"><span style="color:#252C64;">Your Data</span><span style="color:#2DCED6;"> is</span><br><span style="color:#3C52F3;"> Your info</span></h1>
                 <p class="hero-para">It's time to get paid.
@@ -47,14 +55,12 @@
             <div>
                 <img src="/images/banner.png" alt="hero image" class="hero-image" >
             </div>
-        </div>
     </section>
 
     
 <!-- about section -->
 
-    <section>
-        <div class="about-section">
+    <section class="about-section">
             <div>
                 <img src="/images/86@2x.png" alt="about image" class="about-image" >
             </div>
@@ -64,13 +70,11 @@
                 <p class="about-para">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr
                 </p>
             </div>
-        </div>
     </section>
 
 <!-- Contact section -->
 
-    <section>
-        <div class="contact-section">
+    <section class="contact-section">
 
             <div >
                 <h1 class="contact-heading">Contact Us!
@@ -94,7 +98,6 @@
                 <img src="/images/mobile.png" alt="about image" class="contact-image" >
             </div>
 
-        </div>
     </section>
 
 <!-- footer -->
@@ -112,10 +115,6 @@
             <span>Copyright © Your Info Inc 2022.</span>
         </div>
     </footer>
-
-
-
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

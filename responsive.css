@@ -1,0 +1,156 @@
+/* Responsive Styles */
+
+/* Tablet (1024px and below) */
+@media (max-width: 1024px) {
+    .hero-heading {
+        font-size: 70px;
+    }
+
+    .about-heading, .contact-heading {
+        font-size: 60px;
+    }
+
+    .hero-para, .about-para, .contact-para {
+        font-size: 20px;
+    }
+
+    .inner-container h4 {
+        font-size: 28px;
+    }
+
+    .inner-container input {
+        width: 70%;
+    }
+
+    .hero-section::before {
+        top: -15%;
+        left: 10px;
+        transform: rotate(350deg);
+    }
+}
+
+/* Mobile (768px and below) */
+@media (max-width: 768px) {
+    .hero-section, .about-section, .contact-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+        padding: 50px 0;
+    }
+
+    .hero-heading {
+        font-size: 50px;
+    }
+
+    .about-heading, .contact-heading {
+        font-size: 45px;
+    }
+
+    .hero-para, .about-para, .contact-para {
+        font-size: 18px;
+    }
+
+    .inner-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+        gap: 20px;
+    }
+
+    .inner-container input {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 50px;
+    }
+
+    .hero-section::before {
+        top: -10%;
+        left: 5px;
+        transform: rotate(345deg);
+    }
+
+    /* Mobile Menu */
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-items {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .nav-btn {
+        margin-top: 15px;
+    }
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+    .hero-heading {
+        font-size: 40px;
+    }
+
+    .about-heading, .contact-heading {
+        font-size: 35px;
+    }
+
+    .hero-para, .about-para, .contact-para {
+        font-size: 16px;
+    }
+
+    .nav-container {
+        padding: 10px;
+    }
+
+    .nav-btn, .hero-btn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .submit {
+        font-size: 18px;
+        padding: 12px 30px;
+    }
+
+    .footer {
+        padding: 30px;
+    }
+
+    .container {
+        font-size: 16px;
+    }
+
+    .hero-section::before {
+        top: -25%;
+        left: 0;
+        transform: rotate(358deg);
+        border-radius: 15px;
+    }
+
+    
+    .inner-container {
+        margin-top: -100px;
+        padding: 15px;
+    }
+
+}
