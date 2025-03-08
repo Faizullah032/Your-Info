@@ -1,123 +1,106 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-     <link rel="stylesheet" href="styles.css" />
-     <link rel="stylesheet" href="responsive.css" />
-    <title>Your Info</title>
+    <title>TechTrend Innovations</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
-    
-    <header>
+    <header class="header">
         <nav class="nav">
             <div class="nav-container">
-                <a href="https://flowbite.com" class="">
-                    <img src="images/logo.svg" class="logo" alt="Flowbite Logo" />
+                <a href="#" class="logo-link">
+                    <img src="images/logo.svg" class="logo" alt="TechTrend Innovations Logo">
                 </a>
-
                 <div class="nav-menu" id="nav-menu">
                     <ul class="nav-items">
-                        <li>
-                            <a href="#" class="list-item">Home</a>
-                        </li>
-                        <li>
-                            <a href="#" class="list-item">About</a>
-                        </li>
-                        <li>
-                            <a href="#" class="list-item">Contact Us</a>
-                        </li>
+                        <li><a href="#" class="list-item">Home</a></li>
+                        <li><a href="#" class="list-item">Services</a></li>
+                        <li><a href="#" class="list-item">Support</a></li>
                     </ul>
                 </div>
-                <div class="nav-btn">
-                    <a href="#" class="">Log in</a>
-                </div>
-
+                <a href="#" class="nav-btn">Get Started</a>
                 <div class="hamburger" id="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </div>
-
             </div>
         </nav>
     </header>
 
-    <section class="hero-section">
-            <div >
-                <h1 class="hero-heading"><span style="color:#252C64;">Your Data</span><span style="color:#2DCED6;"> is</span><br><span style="color:#3C52F3;"> Your info</span></h1>
-                <p class="hero-para">It's time to get paid.
-                    Start earning on your own valubale data & keep earning for regular everyday data activity.
-                    Signup for early access.</p>
-                    <a href="#" class="hero-btn">Log in</a>
-            </div>
-            <div>
-                <img src="/images/banner.png" alt="hero image" class="hero-image" >
-            </div>
-    </section>
-
-    
-<!-- about section -->
-
-    <section class="about-section">
-            <div>
-                <img src="/images/86@2x.png" alt="about image" class="about-image" >
-            </div>
-
-            <div >
-                <h1 class="about-heading">Revolutionizing Your Info With Us!</h1>
-                <p class="about-para">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr
-                </p>
-            </div>
-    </section>
-
-<!-- Contact section -->
-
-    <section class="contact-section">
-
-            <div >
-                <h1 class="contact-heading">Contact Us!
+    <main>
+        <section class="hero--section">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-heading">
+                    <span class="color-dark">Innovate</span>
+                    <span class="color-accent"> with</span><br>
+                    <span class="color-primary">TechTrend</span>
                 </h1>
-                <p class="contact-para">Our team at is waiting for you to discuss your vision for your query .
+                <p class="hero-para">
+                    Transform your business with cutting-edge technology solutions. Boost efficiency, increase productivity, and stay ahead of the competition. Join us today!
                 </p>
-                <div>
-                    <p class="contact-para">Fill up the form below to help us know more your ideas.
-                    </p>
-                    <form>
-                        <div class="inputs-fields">
-                            <input type="text" placeholder="Full Name" class="input">
-                            <input type="email" placeholder="Email" class="input">
-                            <input type="number" placeholder="Number" class="input">
-                        </div>
-                        <button type="submit" class="submit">Submit</button>
-                    </form>
-                </div>
+                <a href="#" class="hero-btn">Try Now</a>
             </div>
-            <div>
-                <img src="/images/mobile.png" alt="about image" class="contact-image" >
+            <div class="hero-image-container">
+                <img src="images/banner.png" alt="Technology solutions illustration" class="hero-image">
             </div>
+        </div>
+        </section>
 
-    </section>
+        <section class="about-section">
+            <div class="about-image-container">
+                <img src="images/86@2x.png" alt="Innovation illustration" class="about-image">
+            </div>
+            <div class="about-content">
+                <h2 class="about-heading">Pioneering Tech Solutions</h2>
+                <p class="about-para">
+                    At TechTrend Innovations, we're dedicated to delivering state-of-the-art technology solutions that empower businesses to thrive in the digital age. Our expert team combines creativity with technical expertise to drive your success.
+                </p>
+            </div>
+        </section>
 
-<!-- footer -->
+        <section class="contact-section">
+            <div class="contact-content">
+                <h2 class="contact-heading">Get in Touch!</h2>
+                <p class="contact-para">
+                    Ready to revolutionize your business? Our support team is here to help you every step of the way.
+                </p>
+                <form class="contact-form">
+                    <div class="inputs-fields">
+                        <input type="text" placeholder="Your Name" class="input" required>
+                        <input type="email" placeholder="Business Email" class="input" required>
+                        <input type="tel" placeholder="Contact Number" class="input" required>
+                    </div>
+                    <button type="submit" class="submit">Send Request</button>
+                </form>
+            </div>
+            <div class="contact-image-container">
+                <img src="images/mobile.png" alt="Support illustration" class="contact-image">
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
-        <div class="inner-container">
-            <div>
-                <h4>GET AMAZING OFFERS!</h4>
-                <h4>Subscribe Our Newsletter</h4>
+        <div class="newsletter-container">
+            <div class="newsletter-content">
+                <h4>STAY UPDATED!</h4>
+                <h4>Join Our Tech Community</h4>
             </div>
-            <input type="email" placeholder="Your Email">
+            <input type="email" placeholder="Enter Your Email" class="newsletter-input">
         </div>
-        <div class="container">
-            <img src="./images/footer_logo.png" alt="footer logo" >
-            <span>Copyright © Your Info Inc 2022.</span>
+        <div class="footer-bottom">
+            <img src="images/footer_logo.png" alt="TechTrend logo" class="footer-logo">
+            <span>Copyright © TechTrend Innovations 2025</span>
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

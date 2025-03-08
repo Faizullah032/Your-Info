@@ -1,117 +1,107 @@
-// GSAP Navbar Animation
-gsap.from(".nav-btn, .logo", {
-    y: -50, // Reduced from -100
-    opacity: 0,
-    duration: 0.8,
-    delay: 0.3,
-    ease: "power.out",
+
+
+// index.js
+document.addEventListener('DOMContentLoaded', () => {
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    // GSAP Animations
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Navbar animation
+    gsap.from('.nav-container', {
+        y: -50,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power2.out'
+    });
+
+    // Hero animation
+    gsap.from('.hero-content', {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: 'power2.out',
+        delay: 0.3
+    });
+
+    gsap.from('.hero-image', {
+        x: 50,
+        opacity: 0,
+        duration: 1,
+        ease: 'power2.out',
+        delay: 0.5
+    });
+
+    // About section animation
+    gsap.from('.about-content', {
+        scrollTrigger: {
+            trigger: '.about-section',
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+        },
+        y: 50,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power2.out'
+    });
+
+    gsap.from('.about-image', {
+        scrollTrigger: {
+            trigger: '.about-section',
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+        },
+        x: -50,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power2.out',
+        delay: 0.2
+    });
+
+    // Contact section animation
+    gsap.from('.contact-content', {
+        scrollTrigger: {
+            trigger: '.contact-section',
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+        },
+        y: 50,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power2.out'
+    });
+
+    gsap.from('.contact-image', {
+        scrollTrigger: {
+            trigger: '.contact-section',
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+        },
+        x: 50,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power2.out',
+        delay: 0.2
+    });
+
+    // Footer animation
+    gsap.from('.footer', {
+        scrollTrigger: {
+            trigger: '.footer',
+            start: 'top 90%',
+            toggleActions: 'play none none reverse'
+        },
+        y: 50,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power2.out'
+    });
 });
 
-gsap.from(".nav-items", {
-    y: -50, // Reduced from -120
-    opacity: 0,
-    duration: 0.7,
-    delay: 0.3,
-    ease: "power3.out",
-});
-
-// Hero Section Animation
-gsap.from(".hero-heading, .hero-para, .hero-btn", {
-    y: 50, // Reduced from 150
-    x: -50, // Reduced from -150
-    opacity: 0,
-    duration: 0.9,
-    delay: 0.3,
-    ease: "power2.out",
-    stagger: 0.2,
-});
-
-gsap.from(".hero-section img", {
-    x: 50, // Reduced from 150
-    y: 50, // Reduced from 150
-    opacity: 0,
-    duration: 0.9,
-    delay: 0.3,
-    ease: "power.out",
-});
-
-// About Section Animation (with ScrollTrigger)
-gsap.registerPlugin(ScrollTrigger);
-
-let aboutTL = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".about-section",
-        start: "top 85%",
-        end: "top 20%",
-        scrub: 1.5,
-    },
-});
-
-aboutTL.from(".about-image", {
-    x: -100, // Reduced from -250
-    y: 100, // Reduced from 250
-    opacity: 0,
-    duration: 0.6,
-    ease: "power.out",
-});
-
-aboutTL.from(".about-heading, .about-para", {
-    y: 100, // Reduced from 250
-    x: 100, // Reduced from 250
-    opacity: 0,
-    duration: 0.6,
-    ease: "power.out",
-    stagger: 0.2,
-}, "-=0.5");
-
-// Contact Section Animation
-let contactTL = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".contact-section",
-        start: "top 70%",
-        end: "top 20%",
-        scrub: 1.5,
-    },
-});
-
-contactTL.from(".contact-image", {
-    x: 100, // Reduced from 250
-    y: 100, // Reduced from 250
-    opacity: 0,
-    duration: 1.5,
-    ease: "power.out",
-});
-
-contactTL.from(".contact-heading, .contact-para, .input, .submit", {
-    x: -100, // Reduced from -250
-    y: 100, // Reduced from 250
-    opacity: 0,
-    duration: 1.5,
-    ease: "power.out",
-    stagger: 0.2,
-}, "-=0.5");
-
-contactTL.from(".inner-container, .container", {
-    transform: "scale(0.8)", // Reduced from 0.5
-    opacity: 0,
-    duration: 1,
-}, "-=1");
-
-// Toggle Mobile Menu
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("nav-menu");
-
-hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-    hamburger.classList.toggle("active");
-
-    // GSAP animation for menu items appearing
-    if (navMenu.classList.contains("active")) {
-        gsap.from(".nav-items li", {
-            opacity: 0,
-            y: -20,
-            duration: 0.5,
-            stagger: 0.1,
-        });
-    }
-});
