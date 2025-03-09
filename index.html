@@ -105,8 +105,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
-      </script>
+        AOS.init({
+            // Disable on mobile devices (optional)
+            disable: window.innerWidth < 768, // Disable AOS if screen width is less than 768px
+            
+            // OR customize settings
+            once: true, // Animation happens only once
+            duration: 600, // Reduce duration for faster animations
+            offset: 50, // Trigger animations earlier
+            easing: 'ease-in-out' // Smoother animation
+        });
+    
+        // Re-check window size on resize (optional)
+        window.addEventListener('resize', () => {
+            AOS.refresh();
+        });
+    </script>
     <script src="index.js"></script>
 </body>
 </html>
