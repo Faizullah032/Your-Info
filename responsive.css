@@ -2,6 +2,7 @@
 @media (max-width: 1024px) {
     .hero-heading {
         font-size: 3rem;
+        line-height: 40px;
     }
 
     .about-heading,
@@ -90,6 +91,10 @@
 }
 
 @media (max-width: 480px) {
+
+    .hero-section, .about-section, .contact-section {
+        gap: 0rem;
+    }
     .hero-heading {
         font-size: 2rem;
     }
@@ -97,6 +102,7 @@
     .about-heading,
     .contact-heading {
         font-size: 1.8rem;
+        line-height: 40px;
     }
 
     .hero-para,
@@ -118,4 +124,9 @@
     .newsletter-content h4 {
         font-size: 1.2rem;
     }
+
+    .footer {
+        padding: 2rem 1rem;
+    }
+    
 }
